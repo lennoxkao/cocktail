@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>761</width>
+    <height>587</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>761</width>
+      <height>520</height>
+     </rect>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>16</width>
+      <height>16</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>cocktail</string>
+     </attribute>
+     <widget class="QTabWidget" name="tabWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>751</width>
+        <height>491</height>
+       </rect>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Triangular</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Rum</string>
+       </attribute>
+       <widget class="QPushButton" name="Daiquiri">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>190</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Daiquiri</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Bacardi">
+        <property name="geometry">
+         <rect>
+          <x>65</x>
+          <y>178</y>
+          <width>100</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>60</width>
+          <height>100</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>bacardi</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Cuba_Libre">
+        <property name="geometry">
+         <rect>
+          <x>240</x>
+          <y>190</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>cubalibre</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Mojito">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>190</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Mojito</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="test">
+        <property name="geometry">
+         <rect>
+          <x>130</x>
+          <y>90</y>
+          <width>75</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>test</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>Malibu</string>
+       </attribute>
+       <widget class="QPushButton" name="Red_Hot_Explosion">
+        <property name="geometry">
+         <rect>
+          <x>580</x>
+          <y>190</y>
+          <width>121</width>
+          <height>91</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Red_Hot_Explosion</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Cranberry_Lemonade">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>190</y>
+          <width>141</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cranberry Lemonade</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Malibu_Lemon_Fresh">
+        <property name="geometry">
+         <rect>
+          <x>380</x>
+          <y>190</y>
+          <width>121</width>
+          <height>81</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Malibu_Lemon_Fresh</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Malibu_Cola">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>190</y>
+          <width>101</width>
+          <height>71</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> Malibu Cola</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Vodka</string>
+       </attribute>
+       <widget class="QPushButton" name="Screwdriver">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>210</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Screwdriver</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Vodka_Gimlet">
+        <property name="geometry">
+         <rect>
+          <x>445</x>
+          <y>217</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Vodka_Gimlet</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>Vodka+Cointreau</string>
+       </attribute>
+       <widget class="QPushButton" name="Cosmopolitan">
+        <property name="geometry">
+         <rect>
+          <x>126</x>
+          <y>183</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cosmopolitan</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Lemon_Drop_Martini">
+        <property name="geometry">
+         <rect>
+          <x>440</x>
+          <y>180</y>
+          <width>141</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Lemon_Drop_Martini</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>Tequila</string>
+       </attribute>
+       <widget class="QPushButton" name="Tequila_Sunrise">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>180</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Tequila_Sunrise</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_9">
+       <attribute name="title">
+        <string>Tequila+Cointreau</string>
+       </attribute>
+       <widget class="QPushButton" name="Margarita">
+        <property name="geometry">
+         <rect>
+          <x>230</x>
+          <y>160</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Margarita</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_11">
+       <attribute name="title">
+        <string>Cointreau</string>
+       </attribute>
+       <widget class="QPushButton" name="Cointreau_Fizz">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>170</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cointreau_Fizz</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Cointreau_Fizz_Grenadine">
+        <property name="geometry">
+         <rect>
+          <x>359</x>
+          <y>170</y>
+          <width>131</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Cointreau_Fizz_Grenadine</string>
+        </property>
+       </widget>
+       <zorder>Cointreau_Fizz_Grenadine</zorder>
+       <zorder>Cointreau_Fizz</zorder>
+       <zorder>Cointreau_Fizz</zorder>
+       <zorder>Cointreau_Fizz_Grenadine</zorder>
+      </widget>
+      <widget class="QWidget" name="tab_10">
+       <attribute name="title">
+        <string>Gin+Cointreau</string>
+       </attribute>
+       <widget class="QPushButton" name="White_Lady">
+        <property name="geometry">
+         <rect>
+          <x>310</x>
+          <y>160</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>White_Lady</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_12">
+       <attribute name="title">
+        <string>Gin</string>
+       </attribute>
+       <widget class="QPushButton" name="John_Collins">
+        <property name="geometry">
+         <rect>
+          <x>390</x>
+          <y>180</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>John_Collins</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Orange_Blossom">
+        <property name="geometry">
+         <rect>
+          <x>600</x>
+          <y>180</y>
+          <width>100</width>
+          <height>61</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Orange_Blossom</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Gin_Rickey">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>180</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Gin_Rickey</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Gin_Fizz">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>180</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Gin_Fizz</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_13">
+       <attribute name="title">
+        <string>Gin+Whiskey</string>
+       </attribute>
+       <widget class="QPushButton" name="Silver_Bullet">
+        <property name="geometry">
+         <rect>
+          <x>220</x>
+          <y>130</y>
+          <width>191</width>
+          <height>101</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Silver_Bullet</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_14">
+       <attribute name="title">
+        <string>Whiskey</string>
+       </attribute>
+       <widget class="QPushButton" name="Whisky_Sour">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>240</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Whisky_Sour</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Whisky_Highball">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>230</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Whisky_Highball</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="Whisky_Cokeutton">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>230</y>
+          <width>100</width>
+          <height>60</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Whisky_Coke</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>shots</string>
+     </attribute>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>setting</string>
+     </attribute>
+     <widget class="QComboBox" name="motor_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>60</y>
+        <width>121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>com1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com10</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="connect_motor">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>60</y>
+        <width>131</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>connect_motor</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="test_motor">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>60</y>
+        <width>141</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>test_motor</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="arduino_comboBox">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>160</y>
+        <width>121</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>com1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com9</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>com10</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="connect_arduino">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>160</y>
+        <width>131</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>connect_arduino</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="test_arduino">
+      <property name="geometry">
+       <rect>
+        <x>440</x>
+        <y>160</y>
+        <width>131</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>test_arduino</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>761</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
