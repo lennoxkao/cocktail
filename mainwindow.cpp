@@ -11,6 +11,8 @@ int gin=4;
 int cointreau=5;
 int malibu=6;
 int whisky=7;
+int arduino_check=0;
+int pourtime=0;
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -18,6 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     connect(&confirmWindow,SIGNAL(sentMsg(int)),this,SLOT(receiveMsg(int)));
+//    connect(&clock,SIGNAL(timeout()),this,SLOT(timeOut()));
 }
 
 MainWindow::~MainWindow()
@@ -40,7 +43,8 @@ void MainWindow::on_connect_motor_clicked()
 void MainWindow::on_test_motor_clicked()
 {
     motor_serial.write("ma 500 \n");
-    motor_serial.write("ma 0 \n");
+    connect(&clock,SIGNAL(timeout()),this,SLOT(timeOut()));
+    clock.start();
 }
 
 void MainWindow::on_connect_arduino_clicked()
@@ -77,24 +81,106 @@ void MainWindow::on_test_arduino_clicked()
 
 void MainWindow::on_Bacardi_clicked()
 {
-
-    go_to_pourer_1();
-//    sleep(3000);
-    arduino_command[0]=1;
-    arduino_command[1]=26.1;
-    send_arduino_command();
+    ui->Bacardi->setEnabled(1);
+    go_to_pourer_2();
+    clock.setInterval(3500);/*
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(timeout()));*/
+    connect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step1()));
+    clock.start();
 
 }
+void MainWindow::Bacardi_step1()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step1()));
+    arduino_command[0]=2;
+    arduino_command[1]=6;
+    send_arduino_command();//pour rum
+    qDebug()<<"pour rum";
+    pourtime=arduino_command[1];
+    clock.setInterval((pourtime+1)*1000);
+    connect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step2()));
+    clock.start();
+//    if(arduino_check==20)
+//      {
+//        arduino_check=0;
+//        go_to_pourer_4();
+//        connect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step2()));
+//        clock.start();
+//      }
+
+}
+void MainWindow::Bacardi_step2()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step2()));
+    arduino_serial.readyRead();
+    arduino_serial.waitForReadyRead(1000);
+    arduino_serial.readLine(arduino_sendback,2);
+    arduino_check = arduino_sendback[0];
+    qDebug()<<"aruino_check"<<arduino_check;
+    if(arduino_check==20)
+    {   arduino_check=0;
+        arduino_command[0]=9;
+        arduino_command[1]=5;
+        pourtime=arduino_command[1];
+//        arduino_serial.write(arduino_command);
+        send_arduino_command();//pour Grenadine
+        qDebug()<<"pour grean";
+        clock.setInterval((pourtime+1)*1000);
+        connect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step3()));
+        clock.start();
+    }
+}
+void MainWindow::Bacardi_step3()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step3()));
+    arduino_serial.readyRead();
+    arduino_serial.waitForReadyRead(1000);
+    arduino_serial.readLine(arduino_sendback,2);
+    arduino_check = arduino_sendback[0];
+    qDebug()<<"aruino_check"<<arduino_check;
+    if(arduino_check==20)
+    {
+        go_to_pourer_4();
+        clock.setInterval(3500);
+        connect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step4()));
+        clock.start();
+    }
+
+}
+void MainWindow::Bacardi_step4()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step4()));
+    arduino_command[0]=11;
+    arduino_command[1]=10;
+//    arduino_serial.write(arduino_command);
+    send_arduino_command();
+    qDebug()<<"pour lime juice";
+}
+//    clock.stop();
+//    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step2()));
+//    arduino_command[0]=11;
+//    arduino_command[1]=10;
+//    send_arduino_command();//pour lime juice
+//    qDebug()<<"pour lime";
+//    if(arduino_check==20)
+//    {
+//         arduino_check=0;
+//         ui->Bacardi->setEnabled(1);//done
+//         qDebug()<<"done";
+//    }
+
+
+
 void MainWindow::send_arduino_command()
 {
   arduino_serial.write(arduino_command);
-  arduino_serial.readyRead();
-  arduino_serial.waitForReadyRead((arduino_command[1]+1)*1000);
-  arduino_serial.readLine(arduino_sendback,20);
-  int check = arduino_sendback[0];
-  qDebug()<<check;
-
 }
+
+
 
 void MainWindow::go_to_pourer_1()
 {
@@ -140,9 +226,107 @@ void MainWindow::on_test_clicked()
     confirmWindow.exec();
 
 //        qDebug<<check_alcohol;
+
+
+
+
 }
 
 void MainWindow::receiveMsg(const int msg)
 {
- qDebug() << msg;
+    qDebug() << msg;
+}
+
+void MainWindow::timeOut()
+{
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(timeout()));
+    motor_serial.write("ma 0 \n");
+    qDebug() << "asshole";
+    clock.stop();
+}
+
+void MainWindow::on_Cuba_Libre_clicked()
+{
+    ui->Bacardi->setEnabled(0);
+    go_to_pourer_2();
+    clock.setInterval(3000);
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(timeout()));
+    connect(&clock,SIGNAL(timeout()),this,SLOT(Cuba_Libre_step1()));
+    clock.start();
+}
+void MainWindow::Cuba_Libre_step1()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Cuba_Libre_step1()));
+    arduino_command[0]=2;
+    arduino_command[1]=18;
+    send_arduino_command();//pour rum
+    if(arduino_check=20)
+    {
+        go_to_pourer_7();
+        connect(&clock,SIGNAL(timeout()),this,SLOT(Cuba_Libre_step2()));
+        clock.start();
+    }
+
+}
+void MainWindow::Cuba_Libre_step2()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Bacardi_step2()));
+    arduino_command[0]=14;
+    arduino_command[1]=5;
+    send_arduino_command();//pour coke
+    if(arduino_check=20)
+    {
+        go_to_pourer_4();//done
+    }
+}
+void MainWindow::on_Daiquiri_clicked()
+{
+    ui->Bacardi->setEnabled(0);
+    go_to_pourer_2();
+    clock.setInterval(3000);
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(timeout()));
+    connect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step1()));
+    clock.start();
+}
+void MainWindow::Daiquiri_step1()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step1()));
+    arduino_command[0]=2;
+    arduino_command[1]=27;
+    send_arduino_command();//pour rum;
+    if(arduino_check=20)
+    {
+        go_to_pourer_3();
+        connect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step2()));
+        clock.start();
+    }
+}
+void MainWindow::Daiquiri_step2()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step2()));
+    arduino_command[0]=14;
+    arduino_command[1]=5;
+    send_arduino_command();//pour simple syrump
+    if(arduino_check=20)
+    {
+        go_to_pourer_3();
+        connect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step3()));
+        clock.start();
+    }
+}
+void MainWindow::Daiquiri_step3()
+{
+    clock.stop();
+    disconnect(&clock,SIGNAL(timeout()),this,SLOT(Daiquiri_step3()));
+    arduino_command[0]=11;
+    arduino_command[1]=5;
+    send_arduino_command();//pour lime juice
+    if(arduino_check=20)
+    {
+        ui->Bacardi->setEnabled(1);//done
+    }
 }

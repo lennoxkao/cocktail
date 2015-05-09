@@ -177,10 +177,6 @@ public:
         Cointreau_Fizz_Grenadine->setObjectName(QStringLiteral("Cointreau_Fizz_Grenadine"));
         Cointreau_Fizz_Grenadine->setGeometry(QRect(359, 170, 131, 60));
         tabWidget_2->addTab(tab_11, QString());
-        Cointreau_Fizz_Grenadine->raise();
-        Cointreau_Fizz->raise();
-        Cointreau_Fizz->raise();
-        Cointreau_Fizz_Grenadine->raise();
         tab_10 = new QWidget();
         tab_10->setObjectName(QStringLiteral("tab_10"));
         White_Lady = new QPushButton(tab_10);
@@ -260,7 +256,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(0);
-        tabWidget_2->setCurrentIndex(0);
+        tabWidget_2->setCurrentIndex(10);
 
 
         QMetaObject::connectSlotsByName(MainWindow);

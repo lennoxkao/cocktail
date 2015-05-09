@@ -52,7 +52,7 @@
        <enum>QTabWidget::Triangular</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>10</number>
       </property>
       <widget class="QWidget" name="tab_4">
        <attribute name="title">
@@ -321,10 +321,6 @@
          <string>Cointreau_Fizz_Grenadine</string>
         </property>
        </widget>
-       <zorder>Cointreau_Fizz_Grenadine</zorder>
-       <zorder>Cointreau_Fizz</zorder>
-       <zorder>Cointreau_Fizz</zorder>
-       <zorder>Cointreau_Fizz_Grenadine</zorder>
       </widget>
       <widget class="QWidget" name="tab_10">
        <attribute name="title">

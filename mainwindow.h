@@ -7,6 +7,7 @@
 #include <QStringList>
 #include <Qchar>
 #include <QTimer>
+#include <QThread>
 #include <QFile>
 #include <QMessageBox>
 #include <QTextStream>
@@ -47,9 +48,28 @@ private slots:
 
     void receiveMsg(const int msg);
 
+    void timeOut();
+
+    void Bacardi_step1();
+    void Bacardi_step2();
+    void Bacardi_step3();
+    void Bacardi_step4();
+
+
+    void on_Cuba_Libre_clicked();
+    void Cuba_Libre_step1();
+    void Cuba_Libre_step2();
+
+    void on_Daiquiri_clicked();
+    void Daiquiri_step1();
+    void Daiquiri_step2();
+    void Daiquiri_step3();
+
+
 private:
     Ui::MainWindow *ui;
     confirm confirmWindow;
+    QTimer clock;
     void send_arduino_command();
     void go_to_pourer_1();
     void go_to_pourer_2();

@@ -260,6 +260,8 @@ release\moc_mainwindow.cpp: ..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QMain
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QTimer \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qtimer.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QThread \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qthread.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QFile \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QMessageBox \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
@@ -278,6 +280,7 @@ release\moc_mainwindow.cpp: ..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QMain
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QByteArray \
 		confirm.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QDialog \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QObject \
 		mainwindow.h
 	C:\Qt\5.4\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.4/msvc2012_opengl/mkspecs/win32-msvc2012 -IC:/Tutorial/cocktail_machine_ver2 -IC:/Qt/5.4/msvc2012_opengl/include -IC:/Qt/5.4/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.4/msvc2012_opengl/include/QtGui -IC:/Qt/5.4/msvc2012_opengl/include/QtSerialPort -IC:/Qt/5.4/msvc2012_opengl/include/QtCore mainwindow.h -o release\moc_mainwindow.cpp
 
@@ -384,6 +387,7 @@ release\moc_confirm.cpp: ..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QDialog 
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtGui\qvector2d.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QObject \
 		confirm.h
 	C:\Qt\5.4\msvc2012_opengl\bin\moc.exe $(DEFINES) -D_MSC_VER=1700 -D_WIN32 -IC:/Qt/5.4/msvc2012_opengl/mkspecs/win32-msvc2012 -IC:/Tutorial/cocktail_machine_ver2 -IC:/Qt/5.4/msvc2012_opengl/include -IC:/Qt/5.4/msvc2012_opengl/include/QtWidgets -IC:/Qt/5.4/msvc2012_opengl/include/QtGui -IC:/Qt/5.4/msvc2012_opengl/include/QtSerialPort -IC:/Qt/5.4/msvc2012_opengl/include/QtCore confirm.h -o release\moc_confirm.cpp
 
@@ -525,6 +529,8 @@ release\main.obj: main.cpp mainwindow.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QTimer \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qtimer.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QThread \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qthread.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QFile \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QMessageBox \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
@@ -543,6 +549,7 @@ release\main.obj: main.cpp mainwindow.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QByteArray \
 		confirm.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QDialog \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QObject \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QApplication \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\qapplication.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qcoreapplication.h \
@@ -666,6 +673,8 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QTimer \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qtimer.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qbasictimer.h \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QThread \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qthread.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QFile \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QMessageBox \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\qmessagebox.h \
@@ -684,6 +693,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QByteArray \
 		confirm.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtWidgets\QDialog \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QObject \
 		ui_mainwindow.h
 
 release\confirm.obj: confirm.cpp confirm.h \
@@ -790,6 +800,7 @@ release\confirm.obj: confirm.cpp confirm.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\qfiledevice.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtGui\qvector2d.h \
 		..\..\Qt\5.4\msvc2012_opengl\include\QtGui\qtouchdevice.h \
+		..\..\Qt\5.4\msvc2012_opengl\include\QtCore\QObject \
 		ui_confirm.h
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
